@@ -19,6 +19,7 @@ Apache Polaris Console
 | env.polarisPrincipalScope | string | `"PRINCIPAL_ROLE:ALL"` | Principal scope requested by the console when authenticating to Polaris. |
 | env.polarisRealm | string | `"POLARIS"` | Polaris realm used by the console. |
 | extraEnv | object | `{}` | Additional environment variables injected into the Polaris Console container. |
+| extraEnvVars | list | `[]` | Additional environment variables as Kubernetes EnvVar objects, for values read from a Secret or a ConfigMap. |
 | httproute.annotations | object | `{}` | Additional annotations applied to the HTTPRoute. |
 | httproute.enabled | bool | `false` | Enable Gateway API HTTPRoute for Polaris Console. |
 | httproute.gatewayGroup | string | `"gateway.networking.k8s.io"` | Gateway API group used by the parent reference. |

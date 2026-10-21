@@ -61,6 +61,14 @@ extraEnv: {}
   # VITE_OIDC_REDIRECT_URI: http://localhost:5173/auth/callback
   # VITE_OIDC_SCOPE: "openid profile email"
 
+# -- Additional environment variables as Kubernetes EnvVar objects, for values read from a Secret or a ConfigMap.
+extraEnvVars: []
+  # - name: VITE_OIDC_CLIENT_ID
+  #   valueFrom:
+  #     secretKeyRef:
+  #       name: polaris-console-oidc
+  #       key: client_id
+
 resources:
   limits:
     # -- CPU limit for the Polaris Console container.
